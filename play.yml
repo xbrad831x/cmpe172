@@ -5,10 +5,11 @@
     - name: Check if httpd is installed
       yum: 
         name: httpd
-        state: present
+        update_cache: yes
+        state: latest
 
-    - name: Write hello world to www
-      shell: echo '<html> HELLO WORLD!!! </html>' > /var/www/html/helloworld.php
+    - name: Create page with "Hello, world!"
+      template: src=index.html dest=/var/www/html/index.html backup=yes
 
     - name: Check if httpd is running
       service: name=httpd state=started

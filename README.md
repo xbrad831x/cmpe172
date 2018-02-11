@@ -8,6 +8,8 @@ In order to run a playbook, make sure you have the private key `test.pem` stored
 $ ansible-playbook <play>.yml
 ~~~
 
+The test website can be viewed [here](http://ec2-18-219-141-153.us-east-2.compute.amazonaws.com).
+
 ## Contributors
 * Brandon Mercado - [xbrad831x](https://github.com/xbrad831x)
 * Luis Arevalo - [luisarevalo21](https://github.com/luisarevalo21)
