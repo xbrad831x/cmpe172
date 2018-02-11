@@ -7,10 +7,8 @@
         name: httpd
         state: present
 
+    - name: Write hello world to www
+      shell: printf '<html> HELLO WORLD!!! </html>' > /var/www/html/helloworld.php
+
     - name: Check if httpd is running
       service: name=httpd state=started
-
-    - name: Write hello world to www
-      shell: printf '<html> HELLO WORLD!!! </html>' > ../../var/www/html/helloworld.php
-      
- 
