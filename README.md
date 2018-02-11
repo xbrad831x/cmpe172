@@ -9,8 +9,14 @@ $ ansible-playbook <play>.yml
 ~~~
 
 ## Contributors
-
 * Brandon Mercado - [xbrad831x](https://github.com/xbrad831x)
 * Luis Arevalo - [luisarevalo21](https://github.com/luisarevalo21)
 * Brandon Cecilio - [vennturtle](https://github.com/vennturtle)
 * Haoyang Liu - [lhy2016](https://github.com/lhy2016)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](/LICENSE.md) file for details
+
+## Acknowledgements
+* Development supported by our professor at SJSU, Prof. Andrew H. Bond
