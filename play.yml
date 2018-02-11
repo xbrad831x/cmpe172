@@ -1,0 +1,16 @@
+---
+- hosts: test
+  sudo: yes
+  tasks:
+    - name: Check if httpd is installed
+      yum: 
+        name: httpd
+        state: present
+
+    - name: Check if httpd is running
+      service: name=httpd state=started
+
+    - name: Write hello world to www
+      shell: printf '<html> HELLO WORLD!!! </html>' > ../../var/www/html/helloworld.php
+      
+ 
