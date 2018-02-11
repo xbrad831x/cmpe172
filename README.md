@@ -13,4 +13,4 @@ $ ansible-playbook <play>.yml
 * Brandon Mercado - [xbrad831x](https://github.com/xbrad831x)
 * Luis Arevalo - [luisarevalo21](https://github.com/luisarevalo21)
 * Brandon Cecilio - [vennturtle](https://github.com/vennturtle)
-* Haoyang - [lhy2016](https://github.com/lhy2016)
+* Haoyang Liu - [lhy2016](https://github.com/lhy2016)
