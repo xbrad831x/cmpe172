@@ -21,5 +21,5 @@ The test website can be viewed [here](http://ec2-18-219-141-153.us-east-2.comput
 This project is licensed under the MIT License - see the [LICENSE.md](/LICENSE.md) file for details
 
 ## Acknowledgements
-* Ansible is owned by [Red Hat, Inc.](https://www.redhat.com/en) and sponsored by [Ansible, Inc](https://www.ansible.com/)
+* Ansible is owned by [Red Hat, Inc](https://www.redhat.com/en) and sponsored by [Ansible, Inc](https://www.ansible.com/)
 * Development supported by our professor at SJSU, Prof. Andrew H. Bond
