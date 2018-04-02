@@ -14,7 +14,7 @@ Use the following command in the project directory to run a playbook:
 $ ansible-playbook <play>.yml
 ~~~
 
-The test website can be viewed [here](http://ec2-18-219-141-153.us-east-2.compute.amazonaws.com).
+The test website can be viewed [here](http://ec2-18-219-141-153.us-east-2.compute.amazonaws.com)..
 
 ## Contributors
 * Brandon Mercado - [xbrad831x](https://github.com/xbrad831x)
