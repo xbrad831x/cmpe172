@@ -1,6 +1,0 @@
----
-- hosts: test
-  sudo: yes
-  tasks:
-    - name: stop webserver
-      service: name=httpd state=stopped
