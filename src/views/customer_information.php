@@ -45,6 +45,20 @@ $row = mysqli_fetch_array($sql);
   </div>
 </nav>
 
+<div class="row">
+  <div class="col-sm-8">
+    Table
+  </div>
+  <div class="col-sm-4">
+    <form name="search_form" class="navbar-form navbar-left" onsubmit="return search_query()">
+      <div class="form-group">
+        <input type="text" id="search" class="form-control" placeholder="Search">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
+
 
 </body>
 
