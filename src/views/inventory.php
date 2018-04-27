@@ -33,12 +33,13 @@ $row = mysqli_fetch_array($sql);
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <div class="navbar-brand"><a href="./user_homepage.php">Hello <?php echo $row['Username']; ?></a></div>
+      <div class="navbar-brand"><a href="../../index.php">Hello <?php echo $row['Username']; ?></a></div>
     </div>
     <ul class="nav navbar-nav">
     	<li><a href="./customer_information.php">Customer Information</a></li>
     	<li><a href="./staff_information.php">Staff Information</a></li>
     	<li>Inventory</li>
+      <?php if(isset($_SESSION['admin'])){ ?> <li><a href="./sign_up.php">Create account</a></li> <?php }else{} ?>
     	<li><a href="../controllers/logout_controller.php">Log Out</a></li>
     </ul>
   </div>
