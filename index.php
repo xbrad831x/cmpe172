@@ -10,7 +10,7 @@ if( isset($_SESSION['user'])!="" ){
 
 <head>
 
-<title>MyWorld</title>
+<title>Workhub</title>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
