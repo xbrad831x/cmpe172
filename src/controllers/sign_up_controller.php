@@ -5,7 +5,7 @@ $password = md5($_REQUEST['password']);
 $email = $_REQUEST['email'];
 $userid = md5($username);
 
-$conn = mysqli_connect("localhost","root","","myworld");
+$conn = mysqli_connect("localhost","root","","workhub");
 
 $sql = mysqli_query($conn, "SELECT * FROM users WHERE Username='$username'");
 

@@ -4,7 +4,7 @@ if( !isset($_SESSION['user']) ) {
   header("Location: http://localhost");
  }
 
-$conn = mysqli_connect("localhost","root","","myworld");
+$conn = mysqli_connect("localhost","root","","workhub");
 $userid = $_SESSION['user'];
 
 $sql = mysqli_query($conn, "SELECT * FROM users WHERE UserId='$userid'");

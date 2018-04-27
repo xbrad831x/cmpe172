@@ -5,7 +5,7 @@ if( isset($_SESSION['user'])!="" ){
  }
 $username = $_REQUEST['username'];
 $password = md5($_REQUEST['password']);
-$conn = $conn = mysqli_connect("localhost","root","","myworld");
+$conn = mysqli_connect("localhost","root","","workhub");
 
 $sql = mysqli_query($conn, "SELECT * FROM users WHERE Username='$username' AND Password='$password' LIMIT 1");
 
