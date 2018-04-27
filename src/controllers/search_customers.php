@@ -18,7 +18,7 @@ if(mysqli_num_rows($result) > 0)
 	}
 }
 
-echo json_encode($arr);
+echo json_encode(array_filter($arr));
 
 mysqli_close($conn);
 
