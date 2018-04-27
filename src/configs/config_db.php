@@ -31,7 +31,8 @@ $sql2 = "CREATE TABLE users (
 UserId VARCHAR(200), 
 Username VARCHAR(30),
 Password VARCHAR(200),
-Email VARCHAR(50))";
+Email VARCHAR(50)),
+Admin TINYINT(1) NOT NULL";
 
 if ($conn2->query($sql2) === TRUE) {
     echo "Table users created successfully";
