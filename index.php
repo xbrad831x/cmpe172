@@ -1,7 +1,14 @@
 <?php
 session_start();
 if( isset($_SESSION['user'])!="" ){
-  header("Location: http://localhost/src/views/user_homepage.php");
+  if(isset($_SESSION['admin']) == true)
+  {
+  	header("Location: http://localhost/src/views/admin_dashboard.php");
+  }
+  else
+  {
+  	header("Location: http://localhost/src/views/user_homepage.php");
+  }
  }
 
 ?>
@@ -25,7 +32,7 @@ if( isset($_SESSION['user'])!="" ){
 <div class="container">
 
 <h1 class="text-center" id="landing_title">Welcome to Workhub!<h1>
-<h2 class="text-center" id="landgin_description">A Simple Way to browse through your data.</h2>
+<h2 class="text-center" id="landgin_description">A Simple Way to help browse enterprise data.</h2>
 
 <form class="col-md-4 col-md-offset-4"method="post" action="./src/controllers/sign_in_controller.php">
 	<div class="form-group">

@@ -13,7 +13,17 @@ if(mysqli_num_rows($sql) == 1)
 {
 	$row = mysqli_fetch_array($sql);
 	$_SESSION['user'] = $row['UserId'];
-	header("Location: http://localhost/src/views/user_homepage.php");
+
+	if($row['Admin'] == 1)
+	{
+		$_SESSION['admin'] = true;
+		header("Location: http://localhost/src/views/admin_dashboard.php");
+	}
+	else
+	{
+		header("Location: http://localhost/src/views/user_homepage.php");
+	}
+
 }
 else
 {

@@ -17,7 +17,7 @@ else
 {
 	mysqli_query($conn, "INSERT INTO users (UserId, Username, Password, Email) VALUES ('$userid', '$username', '$password', '$email')");
 	mysqli_close($conn);
-	header("location: http://localhost");
+	header("location: http://localhost/src/views/admin_dashboard.php");
 }
 
 ?>

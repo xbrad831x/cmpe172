@@ -36,9 +36,9 @@ $row = mysqli_fetch_array($sql);
       <div class="navbar-brand"><a href="./user_homepage.php">Hello <?php echo $row['Username']; ?></a></div>
     </div>
     <ul class="nav navbar-nav">
-    	<li class="active">Information</li>
-    	<li><a href="./payroll.php">Payroll</a></li>
-    	<li><a href="./documents.php">Documents</a></li>
+    	<li>Customer Information</li>
+    	<li><a href="./staff_information.php">Staff Information</a></li>
+    	<li><a href="./inventory.php">Inventory</a></li>
     	<li><a href="../controllers/logout_controller.php">Log Out</a></li>
     </ul>
   </div>
