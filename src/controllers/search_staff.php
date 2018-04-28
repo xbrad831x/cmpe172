@@ -4,7 +4,7 @@ $query = $_REQUEST['q'];
 
 $conn = mysqli_connect("localhost","root","","workhub");
 
-$sql = "SELECT username, email FROM users WHERE Email LIKE '%$query%'";
+$sql = "SELECT username, Firstname, Lastname, email FROM users WHERE Email LIKE '%$query%'";
 
 $result = mysqli_query($conn, $sql);
 $arr = array();

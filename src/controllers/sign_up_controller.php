@@ -2,6 +2,8 @@
 
 $username = $_REQUEST['username'];
 $password = md5($_REQUEST['password']);
+$firstname = $_REQUEST['firstname'];
+$lastname = $_REQUEST['lastname'];
 $email = $_REQUEST['email'];
 $userid = md5($username);
 
@@ -15,7 +17,8 @@ if(mysqli_num_rows($sql) >= 1)
 }
 else
 {
-	mysqli_query($conn, "INSERT INTO users (UserId, Username, Password, Email) VALUES ('$userid', '$username', '$password', '$email')");
+	mysqli_query($conn, "INSERT INTO users (UserId, Username, Password, Firstname, Lastname, Email) 
+		VALUES ('$userid', '$username', '$password', '$firstname', '$lastname', '$email')");
 	mysqli_close($conn);
 	header("location: http://localhost/src/views/admin_dashboard.php");
 }

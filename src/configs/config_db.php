@@ -32,6 +32,8 @@ UserId VARCHAR(200),
 Username VARCHAR(30),
 Password VARCHAR(200),
 Email VARCHAR(50)),
+Firstname VARCHAR(50),
+Lastname VARCHAR(50),
 Admin TINYINT(1) NOT NULL";
 
 if ($conn2->query($sql2) === TRUE) {

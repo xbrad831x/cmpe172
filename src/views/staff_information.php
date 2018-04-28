@@ -42,6 +42,7 @@ $row = mysqli_fetch_array($sql);
       <li>Staff Information</li>
       <li><a href="./inventory.php">Inventory</a></li>
       <?php if(isset($_SESSION['admin'])){ ?> <li><a href="./sign_up.php">Create account</a></li> <?php }else{} ?>
+      <?php if(isset($_SESSION['admin'])){ ?> <li><a href="./delete_view.php">Delete account</a></li> <?php }else{} ?>
       <li><a href="../controllers/logout_controller.php">Log Out</a></li>
     </ul>
   </div>
@@ -54,6 +55,8 @@ $row = mysqli_fetch_array($sql);
         <thead id="table_header">
           <tr>
             <th>Username</th>
+            <th>First Name</th>
+            <th>Last Name</th>
             <th>Email</th>
           </tr>
         </thead>
@@ -91,7 +94,9 @@ $row = mysqli_fetch_array($sql);
     "sAjaxSource": url,
     columns: [
       {data: "username"},
-      {data: "email"}
+      {data: "Firstname"},
+      {data: "Lastname"},
+      {data: "email"},
     ]
   });
 

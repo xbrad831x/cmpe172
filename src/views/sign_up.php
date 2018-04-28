@@ -33,6 +33,14 @@ session_start();
 		<input class="form-control" type="password" name="password" id="password" placeholder="Password">
 	</div>
 	<div class="form-group">
+		<label for="firstname">First name</label>
+		<input class="form-control" type="text" name="firstname" id="firstname" placeholder="First name">
+	</div>
+	<div class="form-group">
+		<label for="lastname">Last Name</label>
+		<input class="form-control" type="text" name="lastname" id="lastname" placeholder="Last Name">
+	</div>
+	<div class="form-group">
 		<label for="email">Email</label>
 		<input class="form-control" type="email" name="email" id="email" placeholder="Email">
 	</div>
