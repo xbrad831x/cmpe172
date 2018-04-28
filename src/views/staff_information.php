@@ -93,10 +93,10 @@ $row = mysqli_fetch_array($sql);
     "sAjaxDataProp": "",
     "sAjaxSource": url,
     columns: [
-      {data: "username"},
+      {data: "Username"},
       {data: "Firstname"},
       {data: "Lastname"},
-      {data: "email"},
+      {data: "Email"}
     ]
   });
 
