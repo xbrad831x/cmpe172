@@ -4,7 +4,7 @@ $query = $_REQUEST['q'];
 
 $conn = mysqli_connect("localhost","root","","sakila");
 
-$sql = "SELECT first_name, last_name, email FROM customer WHERE email LIKE '%$query%'";
+$sql = "SELECT first_name, last_name, email FROM customer WHERE email LIKE '$query%'";
 
 $result = mysqli_query($conn, $sql);
 $arr = array();

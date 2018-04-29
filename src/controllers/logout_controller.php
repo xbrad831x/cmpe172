@@ -10,6 +10,12 @@ else if(isset($_SESSION['user']))
 }
 
 unset($_SESSION['user']);
+
+if(isset($_SESSION['admin']))
+{
+	unset($_SESSION['admin']);
+}
+
 session_unset();
 session_destroy();
 header("Location: http://localhost");
