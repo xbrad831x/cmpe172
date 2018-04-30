@@ -34,9 +34,19 @@ Password VARCHAR(200),
 Email VARCHAR(50)),
 Firstname VARCHAR(50),
 Lastname VARCHAR(50),
-Admin TINYINT(1) NOT NULL";
+Admin TINYINT(1) NOT NULL)";
+
+$sql3 = "CREATE TABLE files (
+Name VARCHAR(200)
+)";
 
 if ($conn2->query($sql2) === TRUE) {
+    echo "Table users created successfully";
+} else {
+    echo "Error creating table: " . $conn2->error;
+}
+
+if ($conn2->query($sql3) === TRUE) {
     echo "Table users created successfully";
 } else {
     echo "Error creating table: " . $conn2->error;
