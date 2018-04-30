@@ -55,6 +55,7 @@ $row = mysqli_fetch_array($sql);
           <tr>
             <th>Name</th>
             <th></th>
+            <th></th>
           </tr>
         </thead>
       </tbody>
@@ -92,12 +93,31 @@ $row = mysqli_fetch_array($sql);
 	    "render": function ( data, type, row, meta ) {
 	      return '<a style=\"cursor: pointer\" onclick=\"view_file(\''+data.Name+'\')\">View</a>';
 	    	}
+  		},
+  		{
+	    "targets": 2,
+	    "data": $.getJSON(url),
+	    "render": function ( data, type, row, meta ) {
+	      return '<a style=\"cursor: pointer\" onclick=\"delete_file(\''+data.Name+'\')\">Delete</a>';
+	    	}
   		} ]
   });
   }
 
   function view_file(name) {
   	window.open("../controllers/uploads/" + name, 'file', 'resizable,height=260,width=370');
+  }
+
+  function delete_file(name) {
+  	$.post("../controllers/delete_file.php", {name: name}, 
+  		function(data, status, xhr)
+  		{
+  			if(status == "success")
+	  		{
+	  			alert(name + " deleted.");
+	  			location.reload();
+	  		}
+  	});
   }
 
 </script>
