@@ -39,6 +39,7 @@ $row = mysqli_fetch_array($sql);
     	<li><a href="./customer_information.php">Customer Information</a></li>
     	<li><a href="./staff_information.php">Staff Information</a></li>
     	<li><a href="./inventory.php">Inventory</a></li>
+      <li><a href="./documents_view.php">Documents</a></li>
     	<li><a href="../controllers/logout_controller.php">Log Out</a></li>
     </ul>
   </div>

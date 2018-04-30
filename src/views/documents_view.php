@@ -30,8 +30,6 @@ $row = mysqli_fetch_array($sql);
 
 <body>
 
-<div class="container">
-
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -39,70 +37,68 @@ $row = mysqli_fetch_array($sql);
     </div>
     <ul class="nav navbar-nav">
       <li><a href="./customer_information.php">Customer Information</a></li>
-      <li>Staff Information</li>
+      <li><a href="./staff_information.php">Staff Information</a></li>
       <li><a href="./inventory.php">Inventory</a></li>
       <?php if(isset($_SESSION['admin'])){ ?> <li><a href="./sign_up.php">Create account</a></li> <?php }else{} ?>
       <?php if(isset($_SESSION['admin'])){ ?> <li><a href="./delete_view.php">Delete account</a></li> <?php }else{} ?>
-      <li><a href="./documents_view.php">Documents</a></li>
+      <li>Documents</li>
       <li><a href="../controllers/logout_controller.php">Log Out</a></li>
     </ul>
   </div>
 </nav>
 
 <div class="row">
-  <div class="col-sm-8">
-    <table id="search_table" style="display:none">
+  <div class="col-sm-9">
+    <table id="search_table">
       <tbody>
         <thead id="table_header">
           <tr>
-            <th>Username</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
+            <th>Name</th>
+            <th></th>
           </tr>
         </thead>
       </tbody>
     </table>
   </div>
-  <div class="col-sm-4">
-    <form name="search_form" class="navbar-form navbar-left" onsubmit="return search_query()">
-      <div class="form-group">
-        <input type="text" id="search" class="form-control" placeholder="Search">
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+  <div class="col-sm-3">
+  	<form action="../controllers/upload.php" method="post" enctype="multipart/form-data">
+	    Select file to upload:
+	    <input type="file" name="fileToUpload" id="fileToUpload">
+	    <input type="submit" value="Upload File" name="submit">
+	</form>
   </div>
 </div>
 
-
 </body>
 
-</div>
-
 <script type="text/javascript">
-  function search_query() {
-    var value = document.getElementById('search').value;
-    $("#search_table").show();
-    var url = 'http://localhost/src/controllers/search_staff.php?q=' + value;
+  
+  window.onload = function() {
+    var url = 'http://localhost/src/controllers/get_files.php';
     var table = $('#search_table').DataTable( {
     "destroy": true,
     "processing": true,
-    "searching": false,
     "bserverside": true,
     "bPaginate": false,
     "bInfo": false,
     "sAjaxDataProp": "",
     "sAjaxSource": url,
     columns: [
-      {data: "Username"},
-      {data: "Firstname"},
-      {data: "Lastname"},
-      {data: "Email"}
-    ]
+      {data: "Name"}
+    ],
+		"columnDefs": [ {
+	    "targets": 1,
+	    "data": $.getJSON(url),
+	    "render": function ( data, type, row, meta ) {
+	      return '<a style=\"cursor: pointer\" onclick=\"view_file(\''+data.Name+'\')\">View</a>';
+	    	}
+  		} ]
   });
+  }
 
-    return false;
-}
+  function view_file(name) {
+  	window.open("../controllers/uploads/" + name, 'file', 'resizable,height=260,width=370');
+  }
+
 </script>
-
 </html>

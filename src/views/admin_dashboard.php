@@ -41,6 +41,7 @@ $row = mysqli_fetch_array($sql);
     	<li><a href="./inventory.php">Inventory</a></li>
       <li><a href="./sign_up.php">Create account</a></li>
       <li><a href="./delete_view.php">Delete account</a></li>
+      <li><a href="./documents_view.php">Documents</a></li>
     	<li><a href="../controllers/logout_controller.php">Log Out</a></li>
     </ul>
   </div>

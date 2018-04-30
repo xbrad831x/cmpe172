@@ -43,6 +43,7 @@ $row = mysqli_fetch_array($sql);
     	<li><a href="./inventory.php">Inventory</a></li>
       <?php if(isset($_SESSION['admin'])){ ?> <li><a href="./sign_up.php">Create account</a></li> <?php }else{} ?>
       <?php if(isset($_SESSION['admin'])){ ?> <li><a href="./delete_view.php">Delete account</a></li> <?php }else{} ?>
+      <li><a href="./documents_view.php">Documents</a></li>
     	<li><a href="../controllers/logout_controller.php">Log Out</a></li>
     </ul>
   </div>
