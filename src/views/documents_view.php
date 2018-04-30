@@ -93,14 +93,14 @@ $row = mysqli_fetch_array($sql);
 	    "render": function ( data, type, row, meta ) {
 	      return '<a style=\"cursor: pointer\" onclick=\"view_file(\''+data.Name+'\')\">View</a>';
 	    	}
-  		},
+  		} <?php if(isset($_SESSION['admin'])){ ?> ,
   		{
 	    "targets": 2,
 	    "data": $.getJSON(url),
 	    "render": function ( data, type, row, meta ) {
 	      return '<a style=\"cursor: pointer\" onclick=\"delete_file(\''+data.Name+'\')\">Delete</a>';
 	    	}
-  		} ]
+  		} <?php } else{} ?>]
   });
   }
 
